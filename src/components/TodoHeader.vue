@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div>
       <h1>Todo it!</h1>
@@ -12,4 +13,4 @@ export default {
 
 <style lang="scss">
 
-</style>
+</style>;
