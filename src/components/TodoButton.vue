@@ -1,19 +1,21 @@
 <template>
-    <div class="input">
-        <input type="text" v-model="item" placeholder="할 일을 입력해주세요">
+    <div class="button">
+        <button @click="addTodo">추가하기</button>
     </div>
 </template>
 
 <script>
 export default {
-    data: {
-        item : ''
+    methods: {
+        addTodo: function(){
+            alert("버튼이 작동중")
+        }
     }
 }
 </script>
 
 <style lang="scss">
-  .input {
+  .button {
       display: inline-block;
       font-family: 'Edu VIC WA NT Beginner', cursive;
   }
