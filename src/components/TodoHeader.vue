@@ -1,6 +1,6 @@
 /* eslint-disable */
 <template>
-    <div>
+    <div class="title">
       <h1>Todo it!</h1>
     </div>
 </template>
@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+ .title {
+   font-family: 'Edu VIC WA NT Beginner', cursive;
+ }
 </style>;
