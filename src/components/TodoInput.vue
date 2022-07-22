@@ -6,8 +6,10 @@
 
 <script>
 export default {
-    data: {
-        item : ''
+    data () {
+        return {
+            item : ''
+        }
     }
 }
 </script>
