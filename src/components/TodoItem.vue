@@ -6,9 +6,9 @@
 
 <script>
 export default {
-    el: '#item',
-    data() {
-        return{
+    // el: '#item',
+    data () {
+        return {
             number : "1",
             item : "숙제하기"
         }
