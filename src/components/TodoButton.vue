@@ -1,6 +1,6 @@
 <template>
     <div class="button">
-        <button @click="AddTodo">추가하기</button>
+        <button @click="clickAddButton">추가하기</button>
     </div>
 </template>
 
@@ -12,9 +12,10 @@ export default {
         }
     },
     methods: {
-        AddTodo () {
+        // 소문자 시작
+        clickAddButton () {
             console.log('click add button')
-            this.$emit('NewTodoItem', this.TestValue)
+            this.$emit('clickButton')
         }
     }
 }
