@@ -6,7 +6,6 @@
 
 <script>
 export default {
-    // el: '#item',
     data () {
         return {
             number : "1",
