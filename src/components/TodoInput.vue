@@ -19,7 +19,8 @@ export default {
     methods: {
         // 권장 사항: 동사 형태로
         addTodo () {
-            console.log('add Todo')
+            console.log(this.item)
+            this.item=''
         }
     }
 }
