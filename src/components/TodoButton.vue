@@ -1,14 +1,20 @@
 <template>
     <div class="button">
-        <button @click="addTodo">추가하기</button>
+        <button @click="AddTodo">추가하기</button>
     </div>
 </template>
 
 <script>
 export default {
+    data(){
+        return {
+            TestValue: 'test value'
+        }
+    },
     methods: {
-        addTodo: function(){
-            alert("버튼이 작동중")
+        AddTodo () {
+            console.log('click add button')
+            this.$emit('NewTodoItem', this.TestValue)
         }
     }
 }
@@ -19,4 +25,4 @@ export default {
       display: inline-block;
       font-family: 'Edu VIC WA NT Beginner', cursive;
   }
-</style> 
+</style>
