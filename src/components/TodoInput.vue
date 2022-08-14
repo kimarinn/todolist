@@ -1,7 +1,7 @@
 <template>
     <div class="input">
         <input type="text" v-model="item" placeholder="할 일을 입력해주세요">
-        <TodoButton @clickButton="addTodo" />
+        <TodoButton @clickButton="click" />
     </div>
 </template>
 
@@ -13,13 +13,14 @@ export default {
     },
     data () {
         return {
-            item : ""
+            item : ''
         }
     },
     methods: {
         // 권장 사항: 동사 형태로
-        addTodo () {
+        click () {
             console.log(this.item)
+            this.$emit('clickBtn',this.item)
             this.item=''
         }
     }

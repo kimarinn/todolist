@@ -14,7 +14,6 @@ export default {
     methods: {
         // 소문자 시작
         clickAddButton () {
-            console.log('click add button')
             this.$emit('clickButton')
         }
     }
