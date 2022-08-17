@@ -4,7 +4,7 @@
   <div id="app">
     <TodoHeader />
     <TodoInput @clickBtn="addItem"/>
-    <TodoItem v-for="(item, key) in item" :key="key" :todo="item" />
+    <TodoItem v-for="(i, k) in items" :key="k" :todo="i" />
    <!-- <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -26,14 +26,20 @@ export default {
   },
   data(){
     return{
-      item: [],
-      title: 'To do list'
+      items: [],
+      title: 'To do list',
+      num: 1
     }
   },
   methods: {
     addItem(todo){
-      console.log(todo)
-      this.item.push(todo)
+      let todoObj = {
+        idx: this.num,
+        items: todo
+      }
+      console.log(todoObj)
+      this.items.push(todoObj)
+      this.num++
     }
   }
 }
