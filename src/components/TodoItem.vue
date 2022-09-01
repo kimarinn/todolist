@@ -1,7 +1,7 @@
 <template>
     <div class="item-container">
         <!-- <div class="todo-number"> {{number}} </div> -->
-        <div class="todo-item"> {{ todo.idx }}{{ todo.items }}</div>
+        <div class="todo-item"> {{ index + 1 }}{{ todo.items }}</div>
         <div class="deleteBtn">
             <button @click="deleteBtn">X</button>
             </div>
@@ -14,6 +14,10 @@ export default {
         todo:{
             type: Object,
             default: () => {}
+        },
+        index:{
+            type: Number,
+            default: 0
         }
     },
     data () {
@@ -25,6 +29,7 @@ export default {
     methods: {
         deleteBtn () {
             console.log("delete")
+            this.$emit('delClick', this.index)
         }
     }
 }
