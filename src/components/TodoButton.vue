@@ -1,6 +1,6 @@
 <template>
     <div class="button">
-        <button @click="clickAddButton">추가하기</button>
+        <button @click="clickAddButton">ADD</button>
     </div>
 </template>
 
