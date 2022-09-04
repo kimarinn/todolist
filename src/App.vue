@@ -31,6 +31,15 @@ export default {
       num: 1
     }
   },
+
+  created () {
+  },
+
+  mounted () {
+    const todoItem = window.localStorage.getItem('todoItem')
+    this.items = JSON.parse(todoItem)
+  },
+
   methods: {
     addItem(todo){
       const todoObj = {
@@ -40,14 +49,15 @@ export default {
       console.log(todoObj)
       this.items.push(todoObj)
       this.num++
+      window.localStorage.setItem('todoItem', JSON.stringify(this.items))
     },
     deleteItem (data){
       console.log('delete', data)
       console.log('현재', this.items)
       const todoObj = this.items.filter(items => items.idx !== data)
       console.log('삭제후', todoObj)
-      //삭제된 항목의 다음 항목들의 idx를 하나씩 줄여야함
       this.items = todoObj  
+      window.localStorage.setItem('todoItem', JSON.stringify(this.items))
     }
   }
 }

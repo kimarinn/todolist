@@ -29,7 +29,7 @@ export default {
     methods: {
         deleteBtn () {
             console.log("delete")
-            this.$emit('delClick', this.index)
+            this.$emit('delClick', this.todo.idx)
         }
     }
 }
