@@ -37,7 +37,9 @@ export default {
 
   mounted () {
     const todoItem = window.localStorage.getItem('todoItem')
+    if(todoItem !== null){
     this.items = JSON.parse(todoItem)
+    }
   },
 
   methods: {
@@ -63,5 +65,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "./style/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+#app {
+  border: 1px solid;
+  width: 400px;
+  height: 600px;
+  background-color: powderblue;
+  padding: 50px;
+}
+
 </style>

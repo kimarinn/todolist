@@ -1,7 +1,8 @@
 /* eslint-disable */
 <template>
-    <div class="title">
-      <h1>Todo it!</h1>
+    <div class="header">
+      <div class="date"> Sunday, 23 Oct </div>
+      <div class="taskcount"> 3 tasks </div>
     </div>
 </template>
 
@@ -12,7 +13,42 @@ export default {
 </script>
 
 <style lang="scss">
- .title {
-   font-family: 'Edu VIC WA NT Beginner', cursive;
+ .header {
+   gap: 10px;
+   border: 1px solid;
+   border-color:white;
+   border-top-left-radius:30px;
+   border-top-right-radius: 30px;
+   background-color: white;
+   padding: 10px;
+
+   div:nth-child(1) {
+     font-size: 25px;
+     color:gray;
+   }
+
+   div:nth-child(2) {
+     color: powderblue;
+   }
  }
+
+ .date {
+   display: flex;
+   flex-direction: coiumn;
+   justify-content: flex-start;
+   margin-left: 17px;
+   margin-bottom: 15px;
+   margin-top: 30px;
+ }
+
+ .taskcount{
+   display: flex;
+   flex-direction: coiumn;
+   justify-content: flex-start;
+   margin-left: 17px;
+   margin-bottom: 20px;
+ }
+
+ 
+
 </style>;
