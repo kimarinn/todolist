@@ -22,7 +22,7 @@ export default class Date {
             let day = this.dayArray[today.getDay()]
             let date = this.getDate(today)
             let month = this.monthArray[today.getMonth()]
-            return day + "," + date + " " + month
+            return day + ", " + date + " " + month
         }
 
     }

@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
     <div class="header">
-      <div class="date"> {{ dateOfToday }} </div>
+      <div class="date"> {{dateOfToday}} </div>
       <div class="taskcount"> 3 tasks </div>
     </div>
 </template>
@@ -18,6 +18,7 @@ export default {
   created() {
     let today = new Date()
     let dateOfToday = this.$date.dateFormat(today)
+    console.log('[TodoHeader.vue] created', dateOfToday)
   }
     
 }
