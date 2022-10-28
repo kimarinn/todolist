@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import Plugin from './js/Plugin'
+
+Vue.use(Plugin)
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,13 +1,24 @@
 /* eslint-disable */
 <template>
     <div class="header">
-      <div class="date"> Sunday, 23 Oct </div>
+      <div class="date"> {{ dateOfToday }} </div>
       <div class="taskcount"> 3 tasks </div>
     </div>
 </template>
 
 <script>
 export default {
+
+  data() {
+    return {
+      dateOfToday: ''
+    }
+  },
+
+  created() {
+    let today = new Date()
+    let dateOfToday = this.$date.dateFormat(today)
+  }
     
 }
 </script>
