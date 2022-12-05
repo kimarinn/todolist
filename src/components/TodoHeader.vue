@@ -17,8 +17,8 @@ export default {
 
   created() {
     let today = new Date()
-    let dateOfToday = this.$date.dateFormat(today)
-    console.log('[TodoHeader.vue] created', dateOfToday)
+    this.dateOfToday = this.$date.dateFormat(today)
+    console.log('[TodoHeader.vue] created', this.dateOfToday)
   }
     
 }
@@ -49,7 +49,7 @@ export default {
    flex-direction: coiumn;
    justify-content: flex-start;
    margin-left: 17px;
-   margin-bottom: 15px;
+   margin-bottom: 10px;
    margin-top: 30px;
  }
 

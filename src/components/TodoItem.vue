@@ -36,6 +36,13 @@ export default {
 </script>
 
 <style lang="scss">
+.item-container{
+    background-color: white;
+    width: 400px;
+    height: 40px;
+    border: 1px;
+    border-color: lightsteelblue;
+}
 .todo-item {
       display: inline-block; 
 }

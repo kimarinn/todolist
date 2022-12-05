@@ -1,6 +1,6 @@
 <template>
     <div class="input">
-        <input type="text" v-model="item" placeholder="할 일을 입력해주세요">
+        <div class="inputBox"><input type="text" v-model="item" placeholder="할 일을 입력해주세요"></div>
         <TodoButton @clickButton="click" />
     </div>
 </template>
@@ -28,8 +28,21 @@ export default {
 </script>
 
 <style lang="scss">
-  .input {
+ input[type="text"] {
       display: inline-block;
+      background-color: white;
       font-family: 'Edu VIC WA NT Beginner', cursive;
+      width: 310px;
+      height: 40px;
+      border-width: 0.7px;
+      border-color: powderblue;
+      padding: 3px 3px;
+  }
+  .inputBox {
+      display: inline-block;
+      width: 310px;
+      height: 40px;
+      border-width: 0.7px;
+      border-color: powderblue;
   }
 </style> 
